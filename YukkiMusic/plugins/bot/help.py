@@ -8,6 +8,7 @@
 # All rights reserved.
 
 
+from YukkiMusic.plugins.techzbots.start import start_menu_group, start_menu_private
 from typing import Union
 
 from pyrogram import filters, types
@@ -34,42 +35,10 @@ HELP_COMMAND = get_command("HELP_COMMAND")
     & ~filters.edited
     & ~BANNED_USERS
 )
-@app.on_callback_query(
-    filters.regex("settings_back_helper") & ~BANNED_USERS
-)
 async def helper_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
-    is_callback = isinstance(update, types.CallbackQuery)
-    if is_callback:
-        try:
-            await update.answer()
-        except:
-            pass
-        chat_id = update.message.chat.id
-        language = await get_lang(chat_id)
-        _ = get_string(language)
-        keyboard = help_pannel(_, True)
-        if update.message.photo:
-            await update.message.delete()
-            await update.message.reply_text(
-                _["help_1"], reply_markup=keyboard
-            )
-        else:
-            await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
-            )
-    else:
-        chat_id = update.chat.id
-        if await is_commanddelete_on(update.chat.id):
-            try:
-                await update.delete()
-            except:
-                pass
-        language = await get_lang(chat_id)
-        _ = get_string(language)
-        keyboard = help_pannel(_)
-        await update.reply_text(_["help_1"], reply_markup=keyboard)
+    return await start_menu_private(update)
 
 
 @app.on_message(
@@ -80,10 +49,7 @@ async def helper_private(
 )
 @LanguageStart
 async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
-    await message.reply_text(
-        _["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
-    )
+    return await start_menu_group(message)
 
 
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
