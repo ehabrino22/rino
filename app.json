@@ -22,10 +22,10 @@
         "description": "Get this value from https://my.telegram.org",
         "value": "",
         "required": true
-      },      
+      },
       "AUTO_LEAVING_ASSISTANT": {
-        "description": "True If you want your assistant to leave all chats automatically after some time.",
-        "value": "False",
+        "description": "If you want your assistant to leave all chats automatically after some time.",
+        "value": "True",
         "required": false
       },
       "BOT_TOKEN": {
@@ -36,7 +36,7 @@
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
         "value": "",
-        "required": false
+        "required": true
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. Please don't use ascii characters",
@@ -67,10 +67,15 @@
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
         "value": "",
         "required": true
-      },      
-      "START_IMG_URL": {
-        "description": "Telegraph Image URL For Start Command",
-        "value": "https://telegra.ph/file/e17f42bc195635b668d6d.jpg",
+      },
+      "UPSTREAM_REPO": {
+        "description": "If you dont know this, Leave as it is",
+        "value": "https://github.com/TeamYukki/YukkiMusicBot",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "Upstream Repo's Branch Name",
+        "value": "master",
         "required": true
       }
     },
@@ -90,6 +95,5 @@
               "quantity": 1,
               "size": "free"
           }
-      },
-      "stack": "container"
-}
+      }
+  }

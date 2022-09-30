@@ -7,7 +7,6 @@
 #
 # All rights reserved.
 
-from YukkiMusic.plugins.techzbots.database.limitsdb import is_approved
 import os
 from random import randint
 
@@ -201,16 +200,14 @@ async def add_playlist(client, CallbackQuery, _):
             return
     _count = await get_playlist_names(user_id)
     count = len(_count)
-
-    if not await is_approved(user_id):
-        if count == SERVER_PLAYLIST_LIMIT:
-            try:
-                return await CallbackQuery.answer(
-                    _["playlist_9"].format(SERVER_PLAYLIST_LIMIT),
-                    show_alert=True,
-                )
-            except:
-                return
+    if count == SERVER_PLAYLIST_LIMIT:
+        try:
+            return await CallbackQuery.answer(
+                _["playlist_9"].format(SERVER_PLAYLIST_LIMIT),
+                show_alert=True,
+            )
+        except:
+            return
     (
         title,
         duration_min,
