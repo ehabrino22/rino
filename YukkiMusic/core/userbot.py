@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import sys
 
 from pyrogram import Client
@@ -57,9 +48,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("TeamYM")
-                await self.one.join_chat("TheYukki")
-                await self.one.join_chat("YukkiSupport")
+                await self.one.join_chat("AviaxOfficial")
+                await self.one.join_chat("AviaxSupport")                
             except:
                 pass
             assistants.append(1)
@@ -88,9 +78,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("TeamYM")
-                await self.two.join_chat("TheYukki")
-                await self.two.join_chat("YukkiSupport")
+                await self.two.join_chat("AviaxOfficial")
+                await self.two.join_chat("AviaxSupport")
             except:
                 pass
             assistants.append(2)
@@ -119,9 +108,8 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("TeamYM")
-                await self.three.join_chat("TheYukki")
-                await self.three.join_chat("YukkiSupport")
+                await self.three.join_chat("AviaxOfficial")
+                await self.three.join_chat("AviaxSupport")
             except:
                 pass
             assistants.append(3)
@@ -150,9 +138,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("TeamYM")
-                await self.four.join_chat("TheYukki")
-                await self.four.join_chat("YukkiSupport")
+                await self.four.join_chat("AviaxOfficial")
+                await self.four.join_chat("AviaxSupport")
             except:
                 pass
             assistants.append(4)
@@ -181,9 +168,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("TeamYM")
-                await self.five.join_chat("TheYukki")
-                await self.five.join_chat("YukkiSupport")
+                await self.five.join_chat("AviaxOfficial")
+                await self.five.join_chat("AviaxSupport")
             except:
                 pass
             assistants.append(5)
