@@ -26,6 +26,7 @@ async def auto_leave():
 
             for num in assistants:
                 client = await get_client(num)
+                left = 0
                 try:
                     async for i in client.iter_dialogs():
                         chat_type = i.chat.type
@@ -37,14 +38,18 @@ async def auto_leave():
                             chat_id = i.chat.id
                             if (
                                 chat_id != config.LOG_GROUP_ID
-                                and chat_id != -1001572029526
-                                and chat_id != -1001642562293
+                                and chat_id != -1001190342892
+                                and chat_id != -1001733534088
+                                and chat_id != -1001443281821
                             ):
+                                if left == 20:
+                                    continue
                                 if not await is_active_chat(chat_id):
                                     try:
                                         await client.leave_chat(
                                             chat_id
                                         )
+                                        left += 1
                                     except:
                                         continue
                 except:

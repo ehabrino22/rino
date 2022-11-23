@@ -19,7 +19,6 @@ from YukkiMusic.core.mongo import pymongodb
 from .logging import LOGGER
 
 SUDOERS = filters.user()
-SUDO_USERS = []
 
 HAPP = None
 _boot_ = time.time()
@@ -57,14 +56,13 @@ def sudo():
     OWNER = config.OWNER_ID
     if config.MONGO_DB_URI is None:
         for user_id in OWNER:
-            SUDOERS.add(user_id)            
+            SUDOERS.add(user_id)
     else:
         sudoersdb = pymongodb.sudoers
         sudoers = sudoersdb.find_one({"sudo": "sudo"})
         sudoers = [] if not sudoers else sudoers["sudoers"]
         for user_id in OWNER:
             SUDOERS.add(user_id)
-            
             if user_id not in sudoers:
                 sudoers.append(user_id)
                 sudoersdb.update_one(
@@ -75,9 +73,6 @@ def sudo():
         if sudoers:
             for x in sudoers:
                 SUDOERS.add(x)
-                if x not in SUDO_USERS:
-                    SUDO_USERS.append(x)
-                
     LOGGER(__name__).info(f"Sudoers Loaded.")
 
 
