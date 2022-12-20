@@ -41,12 +41,12 @@ from YukkiMusic.utils.inline.stats import (back_stats_buttons,
 loop = asyncio.get_running_loop()
 
 # Commands
-GSTATS_COMMAND = get_command("lobby_COMMAND")
-STATS_COMMAND = get_command("lobby2_COMMAND")
+GSTATS_COMMAND = get_command("GSTATS_COMMAND")
+STATS_COMMAND = get_command("STATS_COMMAND")
 
 
 @app.on_message(
-    filters.command(lobby_COMMAND)
+    filters.command(STATS_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -64,7 +64,7 @@ async def stats_global(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(lobby2_COMMAND)
+    filters.command(GSTATS_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
