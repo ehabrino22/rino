@@ -1,4 +1,4 @@
-name : English
+name : 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English
 
 # General Strings
 general_1 : "Reply to a user's message or give username/user_id."
@@ -112,7 +112,7 @@ set_cb_8 : "Getting back.."
 
 # Misc
 ustats_1 : "No User Stats Found."
-ustats_2 : "Grettings!, You have played **{0}** tracks till now with a whopping count of **{1}** times.\n\nTop {2} played by you:\n\n"
+ustats_2 : "Greetings!, You have played **{0}** tracks till now with a whopping count of **{1}** times.\n\nTop {2} played by you:\n\n"
 
 gstats_1 : "Getting Global Stats, This could take some time..."
 gstats_2 : "No Stats Found."
@@ -277,7 +277,7 @@ P_B_4 : "🎵 Play Playlist"
 #Playlist
 PL_B_1 : "🚀 Play Playlist"
 PL_B_2 : "✚ Playlists"
-PL_B_3 : "🖇 Cpanel"
+PL_B_3 : "✚ CPanel"
 PL_B_4 : "📡 Play Mode"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
@@ -383,7 +383,7 @@ log_3 : "Logging Disabled"
 
 #videomode
 vidmode_1 : "**Usage:**\n/videomode [download|m3u8]"
-vidmode_2 : "Video Play Mode set as downloder. Bot will be downloading tracks now."
+vidmode_2 : "Video Play Mode set as downloader. Bot will be downloading tracks now."
 vidmode_3 : "Video Play Mode set as m3u8. Bot will be play tracks live now."
 
 #broadcast
@@ -433,7 +433,7 @@ gban_1 : "You want to gban yourself? How Fool!"
 gban_2 : "Should i block myself? Lol"
 gban_3 : "You want to block a sudo user?"
 gban_4 : "{0} is already **gbanned** from the bot."
-gban_5 : "**Initializing Gobal Ban on {0}**\n\nExpected Time : {1}."
+gban_5 : "**Initializing Global Ban on {0}**\n\nExpected Time : {1}."
 gban_6 : "**Gbanned Successfully**\n\nBanned **{0}** from **{1}** chats."
 gban_7 : "{0} is not **gbanned **yet from the bot."
 gban_8 : "**Ungbanning {0}**\n\nExpected Time : {1}."
@@ -470,5 +470,3 @@ sug_24 : "You can check my owner and sudo users who manage me.\n\nCommand: /sudo
 sug_25 : "Bot has a feature called **Commands Delete Mode**. It deletes its executed commands automatically.\n\nEnable or disable deletemode from /settings [__Enabled by default__]"
 sug_26 : "You can change language of the bot to available languages for easy understanding.\n\nCommand: /language"
 sug_27 : "Bot has a feature called **Force Play**.\n\n**Force Play** stops the playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.\n\nCommand: /playforce"
-sug_28 : "You know you play directly from spotify's top playlist using /browse command. \n\nChoose category and then the playlist you want to play"
-sug_29 : "You know you can get approved from any sudo user of the bot and remove all your limits from bot :)\n\nCheck sudo list using /sudolist"
